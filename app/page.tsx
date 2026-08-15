@@ -1,22 +1,26 @@
 const highlights = [
   ["CVE-2026-8945", "Mozilla Firefox"],
-  ["2 reports", "Nmap Project"],
+  ["2件報告", "Nmap Project"],
   ["CRTP", "Certified Red Team Professional"],
 ];
 
-const work = [
+const experience = [
   "Webアプリケーションの手動セキュリティ診断",
   "ペネトレーションテスト",
   "攻撃対象・攻撃経路の調査、検証",
-  "証跡・再現手順の整理、報告書作成・レビュー",
-  "Bug Bounty / 検証記事 / 進行管理",
+  "証跡・再現手順の整理",
+  "報告書作成、レビュー対応、進行管理",
+  "検証記事の作成",
+  "Bug Bounty Programで複数の報告実績",
 ];
 
-const credentials = [
+const activities = [
   "Certified Red Team Professional (CRTP)",
   "情報処理安全確保支援士試験 合格",
   "基本情報技術者試験 合格",
   "SecHack365 2025 コンテンツゼミ 修了",
+  "Webセキュリティを中心にCTFへ参加",
+  "VR空間にて「セキュリティ集会」運営",
 ];
 
 export default function Home() {
@@ -26,9 +30,8 @@ export default function Home() {
         本文へ移動
       </a>
 
-      <header className="topbar">
-        <a className="brand" href="#profile" aria-label="プロフィールへ">
-          <span aria-hidden="true">K</span>
+      <header className="site-header">
+        <a className="brand" href="#profile">
           kumama_nui
         </a>
         <nav aria-label="外部リンク">
@@ -46,89 +49,63 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="profile" className="profile-card" aria-labelledby="profile-title">
-        <div className="intro-pane">
-          <div className="role-line">
-            <span aria-hidden="true" />
-            Security Engineer / Vulnerability Researcher
-          </div>
-
-          <div className="intro-copy">
-            <p className="eyebrow">くままぬい — KUMAMA_NUI</p>
+      <section id="profile" className="introduction" aria-labelledby="profile-title">
+        <div className="identity">
+          <div>
+            <p className="role">Security Engineer / Vulnerability Researcher</p>
             <h1 id="profile-title">
               くままぬい
-              <small>/ kumama_nui</small>
+              <small>kumama_nui</small>
             </h1>
-            <p className="summary">
-              Webアプリケーション診断・ペネトレーションテストの実務に従事しながら、
-              脆弱性・攻撃技術の調査と検証を行っています。
-            </p>
           </div>
-
-          <div className="intro-footer">
-            <p>
-              <span>EDUCATION</span>
-              サイバー大学 4年
-            </p>
-            <a href="mailto:user874there@gmail.com">
-              Contact <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-
-        <figure className="portrait">
           <img
+            className="avatar"
             src="/avatar.png"
             alt="狐面と青い浴衣を身につけた、くままぬいのアバター"
             width="1000"
             height="1000"
             fetchPriority="high"
           />
-          <figcaption>
-            <span>ONLINE IDENTITY</span>
-            @kumama_nui
-          </figcaption>
-        </figure>
-
-        <div className="info-strip">
-          <section className="info-block highlights" aria-labelledby="highlights-title">
-            <p className="block-label" id="highlights-title">
-              01 / HIGHLIGHTS
-            </p>
-            <div className="highlight-list">
-              {highlights.map(([title, detail]) => (
-                <div key={title}>
-                  <strong>{title}</strong>
-                  <span>{detail}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="info-block" aria-labelledby="work-title">
-            <p className="block-label" id="work-title">
-              02 / EXPERIENCE
-            </p>
-            <ul className="plain-list">
-              {work.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section className="info-block" aria-labelledby="credentials-title">
-            <p className="block-label" id="credentials-title">
-              03 / CERTIFICATIONS &amp; ACTIVITIES
-            </p>
-            <ul className="plain-list credential-list">
-              {credentials.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p className="community-note">CTF参加 / VR「セキュリティ集会」運営</p>
-          </section>
         </div>
+
+        <p className="summary">
+          Webアプリケーション診断・ペネトレーションテストの実務に従事しながら、
+          脆弱性・攻撃技術の調査と検証を行っています。
+        </p>
+        <p className="education">サイバー大学 4年</p>
       </section>
+
+      <div className="details">
+        <section aria-labelledby="highlights-title">
+          <h2 id="highlights-title">主な実績</h2>
+          <dl className="highlight-list">
+            {highlights.map(([title, detail]) => (
+              <div key={title}>
+                <dt>{title}</dt>
+                <dd>{detail}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        <section aria-labelledby="experience-title">
+          <h2 id="experience-title">実務経験</h2>
+          <ul>
+            {experience.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="activities-title">
+          <h2 id="activities-title">資格・活動</h2>
+          <ul>
+            {activities.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      </div>
     </main>
   );
 }

@@ -12,5 +12,7 @@ test("exports the portfolio homepage", async () => {
   assert.match(html, /Security Engineer/);
   assert.match(html, /CVE-2026-8945/);
   assert.match(html, /Certified Red Team Professional/);
+  assert.match(html, /主な実績/);
+  assert.doesNotMatch(html, /01 \/ HIGHLIGHTS|ONLINE IDENTITY|Contact ↗/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
