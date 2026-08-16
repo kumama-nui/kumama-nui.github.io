@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Zen+Kaku+Gothic+New:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200&family=Zen+Kaku+Gothic+New:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -130,8 +130,8 @@ h1 {
   margin: 0;
   font-family: var(--font-name);
   font-size: clamp(3.25rem, 6vw, 4.8rem);
-  font-weight: 900;
-  letter-spacing: -0.03em;
+  font-weight: 200;
+  letter-spacing: 0.05em;
   line-height: 1.08;
 }
 
