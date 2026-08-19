@@ -1,6 +1,6 @@
 const highlights = [
   ["CVE-2026-8945", "Mozilla Firefox"],
-  ["2件報告", "Nmap Project"],
+  ["Bug Bounty / OSS", "報告経験あり"],
   ["CRTP", "Certified Red Team Professional"],
 ];
 
@@ -11,7 +11,6 @@ const experience = [
   "証跡・再現手順の整理",
   "報告書作成、レビュー対応、進行管理",
   "検証記事の作成",
-  "Bug Bounty Programで複数の報告実績",
 ];
 
 const activities = [
