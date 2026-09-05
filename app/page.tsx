@@ -14,6 +14,7 @@ const experience = [
 ];
 
 const activities = [
+  "Burp Suite Certified Practitioner (BSCP) 合格",
   "Certified Red Team Professional (CRTP)",
   "情報処理安全確保支援士試験 合格",
   "基本情報技術者試験 合格",
