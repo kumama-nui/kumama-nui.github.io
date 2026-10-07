@@ -13,6 +13,8 @@ test("exports the portfolio homepage", async () => {
   assert.match(html, /CVE-2026-8945/);
   assert.match(html, /Certified Red Team Professional/);
   assert.match(html, /主な実績/);
+  assert.match(html, /aria-label=["']言語選択["']/);
+  assert.match(html, />JP<.*>EN</s);
   assert.doesNotMatch(html, /01 \/ HIGHLIGHTS|ONLINE IDENTITY|Contact ↗/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
