@@ -398,6 +398,21 @@ a:focus-visible {
     flex-wrap: wrap;
   }
 
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .site-header nav {
+    gap: 0.1rem;
+  }
+
+  .site-header nav a {
+    min-width: auto;
+    padding-right: 0.35rem;
+    padding-left: 0.35rem;
+  }
+
   .brand {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;

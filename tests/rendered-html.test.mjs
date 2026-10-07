@@ -15,6 +15,7 @@ test("exports the portfolio homepage", async () => {
   assert.match(html, /主な実績/);
   assert.match(html, /aria-label=["']言語選択["']/);
   assert.match(html, />JP<.*>EN</s);
+  assert.match(html, /vrchat\.com\/home\/user\/usr_81968443-2026-4373-8359-dfb4e35f1a1b/);
   assert.doesNotMatch(html, /01 \/ HIGHLIGHTS|ONLINE IDENTITY|Contact ↗/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });

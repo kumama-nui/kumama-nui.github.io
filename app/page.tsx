@@ -178,6 +178,13 @@ export default function Home() {
             >
               LinkedIn
             </a>
+            <a
+              href="https://vrchat.com/home/user/usr_81968443-2026-4373-8359-dfb4e35f1a1b"
+              target="_blank"
+              rel="noreferrer"
+            >
+              VRChat
+            </a>
             <a href="mailto:user874there@gmail.com">Email</a>
           </nav>
           <div className="language-switch" role="group" aria-label={text.languageSelectorLabel}>
